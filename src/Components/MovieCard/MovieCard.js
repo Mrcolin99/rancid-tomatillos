@@ -1,9 +1,8 @@
 import './MovieCard.css'
 
 const MovieCard = ({movieInfo, handleClick}) => {
-  console.log(movieInfo)
   const moviePoster = (
-    <img className="moviePoster"
+    <img onClick={() => handleClick(movieInfo)}className="moviePoster"
     src={movieInfo.poster_path}
     alt={movieInfo.title}
   />)
