@@ -1,0 +1,5 @@
+.movieContainer {
+  height: 100vw;
+  display: flex;
+  justify-content: center;
+}
