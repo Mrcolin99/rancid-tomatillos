@@ -24,10 +24,14 @@ class App extends Component {
     console.log('clicked', this.state.singleMovie)
   }
 
+  goHome = () => {
+    this.setState({clicked: false, singleMovie: {}})
+  }
+
   render() {
     return(
       <main className="App">
-        <h1>Yucky Yams</h1>
+        <h1 className="title" onClick={() => this.goHome()}>Yucky Yams</h1>
         {this.state.clicked === false ? <MovieContainer movies={this.state.movies} handleClick={this.handleClick} /> :
         <MovieDetails singleMovie={this.state.singleMovie}/>
       }

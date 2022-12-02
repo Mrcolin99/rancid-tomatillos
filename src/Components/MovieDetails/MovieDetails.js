@@ -6,11 +6,12 @@ const MovieDetails = ({singleMovie}) => {
 
     <div className="imageDiv">
       <img className="moviePoster" src={singleMovie.poster_path} alt={singleMovie.title} />
-      <img className="moviePoster" src={singleMovie.backdrop_path} alt="Scene from the film" />
+      <img className="movieBackdrop" src={singleMovie.backdrop_path} alt="Scene from the film" />
 
       <div className="movieDetails">
         <h2>{singleMovie.title}</h2>
-        <p>{singleMovie.average_rating}</p>
+        <p>Average Rating: {singleMovie.average_rating}</p>
+        <p>Released on: {singleMovie.release_date}</p>
       </div>
     </div>
   )
