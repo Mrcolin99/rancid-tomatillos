@@ -10,7 +10,8 @@ const MovieDetails = ({singleMovie}) => {
 
       <div className="movieDetails">
         <h2>{singleMovie.title}</h2>
-        <p>{singleMovie.average_rating}</p>
+        <p>Average Rating: {singleMovie.average_rating}</p>
+        <p>Released on: {singleMovie.release_date}</p>
       </div>
     </div>
   )
