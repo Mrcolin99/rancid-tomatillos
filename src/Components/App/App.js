@@ -1,8 +1,8 @@
-import movieData from '../../sampleData.js'
 import { Component } from 'react'
 import './App.css';
 import MovieContainer from '../MovieContainer/MovieContainer.js'
 import MovieDetails from '../MovieDetails/MovieDetails.js'
+import fetchData from '../../apiCalls.js'
 
 class App extends Component {
   constructor() {
@@ -15,12 +15,13 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    this.setState({movies: movieData})
-  }
+    fetchData()
+    .then(data => this.setState({movies: data.movies}))
+    }
 
-  handleClick = (id) => {
-    console.log(id)
-    this.setState({clicked: true, singleMovie: id})
+  handleClick = (movie) => {
+    console.log(movie.id)
+    this.setState({clicked: true, singleMovie: movie})
     console.log('clicked', this.state.singleMovie)
   }
 
