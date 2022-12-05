@@ -20,9 +20,7 @@ class App extends Component {
     }
 
   handleClick = (movie) => {
-    console.log(movie.id)
     this.setState({clicked: true, singleMovie: movie})
-    console.log('clicked', this.state.singleMovie)
   }
 
   goHome = () => {
@@ -32,7 +30,7 @@ class App extends Component {
   render() {
     return(
       <main className="App">
-        <h1 className="title" onClick={() => this.goHome()}>Yucky Yams</h1>
+        <h1 className="title" onClick={() => this.goHome()}>Y U C K Y <br /> Y A M S</h1>
         {this.state.clicked === false ? <MovieContainer movies={this.state.movies} handleClick={this.handleClick} /> :
         <MovieDetails singleMovie={this.state.singleMovie}/>
       }

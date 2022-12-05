@@ -1,9 +1,17 @@
 html {
+  background-color: #666666;
   height: 100%;
 }
 
+.title {
+  color: white;
+  display: flex;
+  margin-left: 5vw;
+  width: 10vw;
+}
 .App {
   display: flex;
+  background-color: black;
   flex-direction: column;
   text-align: center;
 }
