@@ -2,11 +2,18 @@ import './MovieDetails.css'
 
 const MovieDetails = ({singleMovie}) => {
   console.log(singleMovie)
+  const backdropImage = {
+    backgroundImage: `url(${singleMovie.backdrop_path})`,
+    height: "100vh",
+    backgroundRepeat: 'no-repeat' 
+
+  }
+
   return (
 
-    <div className="imageDiv">
+    <div className="imageDiv" style={backdropImage}>
       <img className="moviePoster" src={singleMovie.poster_path} alt={singleMovie.title} />
-      <img className="movieBackdrop" src={singleMovie.backdrop_path} alt="Scene from the film" />
+
 
       <div className="movieDetails">
         <h2>{singleMovie.title}</h2>
