@@ -1,7 +1,12 @@
+import { useEffect } from 'react'
 import './MovieDetails.css'
 
-const MovieDetails = ({singleMovie}) => {
+const MovieDetails = ({singleMovie, fetchSingleMovie, id}) => {
   console.log(singleMovie)
+  useEffect(() => {
+    fetchSingleMovie(id)
+  }, [])
+
   const backdropImage = {
     backgroundImage: `url(${singleMovie.backdrop_path})`,
     height: "100vh",
