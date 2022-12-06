@@ -18,7 +18,7 @@ const MovieDetails = ({singleMovie}) => {
 
         <div className="movieDetails">
           <h2>{singleMovie.title}</h2>
-          <p>Average Rating: {singleMovie.average_rating}</p>
+          <p>Average Rating: {Math.round(singleMovie.average_rating * 100) / 100}</p>
           <p>Released on: {singleMovie.release_date}</p>
         </div>
       </div>
