@@ -11,7 +11,7 @@ class App extends Component {
     super()
     this.state = {
       movies: [],
-      singleMovie: {},
+      singleMovie: null,
       errorMessage: ''
       }
   }
@@ -32,7 +32,7 @@ class App extends Component {
     return(
       <main className="App">
         <nav>
-          <Link to="/"><h1 className="title">Y U C K Y <br /> Y A M S</h1></Link>
+          <Link to="/" style={{ textDecoration: 'none' }}><h1 className="title">Y U C K Y <br /> Y A M S</h1></Link>
         </nav>
         <Switch>
           <Route
@@ -49,9 +49,10 @@ class App extends Component {
             render={({ match }) => (
             <div className="movieDetailsContainer">
              <MovieDetails
+              singleMovie={this.state.singleMovie}
               fetchSingleMovie={this.fetchSingleMovie}
               id={match.params.id}
-              singleMovie={this.state.singleMovie}/>
+              />
             </div>)}
           />
         </Switch>

@@ -5,8 +5,7 @@ export const fetchData = () => {
 }
 
 export const fetchSingleData = (id) => {
-    console.log(id.id)
-    return fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id.id}`)
+    console.log(id)
+    return fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}`)
     .then(response => response.json())
 }
-
