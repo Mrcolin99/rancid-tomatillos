@@ -13,8 +13,15 @@ html {
   width: 15vw;
 }
 .App {
+  height: 100vw;
   display: flex;
   background-color: black;
   flex-direction: column;
   text-align: center;
+}
+
+.movieDetailsContainer {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
 }
