@@ -10,8 +10,14 @@ h2 {
 
 .movieDetails {
     background-color: rgba(0,0,0, 0.75);
-    height: 16vh;
+    height: auto;
     width: 30vw;
     margin-left: auto;
     margin-right: auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.detailsSection {
+  margin: 10px;
 }

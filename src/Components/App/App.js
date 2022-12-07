@@ -24,8 +24,8 @@ class App extends Component {
 
   fetchSingleMovie = (id) => {
     fetchSingleData(id)
-    // .then(data => console.log(data.movie))
     .then(data => this.setState({singleMovie: data.movie}))
+    .catch(err => this.setState({errorMessage: "ERROR, Please try again."}))
     }
 
   render() {
@@ -35,8 +35,25 @@ class App extends Component {
           <Link to="/"><h1 className="title">Y U C K Y <br /> Y A M S</h1></Link>
         </nav>
         <Switch>
-          <Route exact path="/" render={() => <MovieContainer handleClick={this.fetchSingleMovie} movies={this.state.movies}/>}/>
-          <Route path="/:id" render={({ match }) => <MovieDetails fetchSingleMovie={this.fetchSingleMovie} id={match.params.id} singleMovie={this.state.singleMovie}/>}/>
+          <Route
+            exact path="/"
+            render={() => (
+              <div className="movieContainer">
+                <MovieContainer
+                handleClick={this.fetchSingleMovie}
+                movies={this.state.movies}/>
+              </div> )}
+          />
+          <Route
+            path="/:id"
+            render={({ match }) => (
+            <div className="movieDetailsContainer">
+             <MovieDetails
+              fetchSingleMovie={this.fetchSingleMovie}
+              id={match.params.id}
+              singleMovie={this.state.singleMovie}/>
+            </div>)}
+          />
         </Switch>
       </main>
     )
