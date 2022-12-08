@@ -39,6 +39,7 @@ const MovieDetails = ({singleMovie, fetchSingleMovie, id}) => {
           <div className="movieGenreBox">
             { movieGenres }
           </div>
+
         </div>
       </section>
   )
