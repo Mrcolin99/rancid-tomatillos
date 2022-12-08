@@ -1,0 +1,14 @@
+{
+    "movies": [
+        {
+            "title": "title",
+            "overview": "overview",
+            "genres": "genre",
+            "average_rating": 4,
+            "revenue": 4,
+            "runtime": 4,
+            "poster_path": "https://image.tmdb.org/t/p/original//6CoRTJTmijhBLJTUNoVSUNxZMEI.jpg"
+
+        }
+    ]
+}

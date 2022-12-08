@@ -34,8 +34,8 @@ const MovieDetails = ({singleMovie, fetchSingleMovie, id}) => {
           <ul>{ singleMovie.genres }</ul>
           <p>Average Rating: {Math.round(singleMovie.average_rating * 100) / 100}</p>
           <p>Released on: {singleMovie.release_date}</p>
-          <p>Revenue: { singleMovie.revenue }</p>
-          <p>Runtime: { singleMovie.runtime }</p>
+          <p>Revenue: ${ singleMovie.revenue }</p>
+          <p>Runtime: { singleMovie.runtime } minutes</p>
         </div>
       </section>
   )
