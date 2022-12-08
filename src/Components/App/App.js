@@ -11,7 +11,7 @@ class App extends Component {
     super()
     this.state = {
       movies: [],
-      singleMovie: null,
+      singleMovie: {},
       errorMessage: ''
       }
   }
@@ -31,8 +31,8 @@ class App extends Component {
   render() {
     return(
       <main className="App">
-        <nav>
-          <Link to="/" style={{ textDecoration: 'none' }}><h1 className="title">Y U C K Y <br /> Y A M S</h1></Link>
+        <nav className="navBar">
+          <Link to="/" className="homeLink">Y U C K Y <br /> Y A M S</Link>
         </nav>
         <Switch>
           <Route

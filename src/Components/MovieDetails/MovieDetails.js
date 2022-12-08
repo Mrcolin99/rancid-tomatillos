@@ -4,7 +4,7 @@ import './MovieDetails.css'
 const MovieDetails = ({singleMovie, fetchSingleMovie, id}) => {
   useEffect(() => {
     fetchSingleMovie(id)
-
+    console.log(singleMovie)
   }, [])
 
   if(!singleMovie) {
@@ -18,14 +18,15 @@ const MovieDetails = ({singleMovie, fetchSingleMovie, id}) => {
     width: "80vw",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
-    padding: "20px"
+    padding: "20px",
+    objectFit: "contain"
 
   }
 
 
   return (
       <section className="detailsSection" style={backdropImage}>
-        <img className="moviePoster" src={singleMovie.poster_path} alt={singleMovie.title} />
+        <img className="singleMoviePoster" src={singleMovie.poster_path} alt={singleMovie.title} />
         <div className="movieDetails">
           <h2>{singleMovie.title}</h2>
           <p>Average Rating: {Math.round(singleMovie.average_rating * 100) / 100}</p>
