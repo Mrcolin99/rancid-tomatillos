@@ -36,3 +36,12 @@ h2 {
   background-color: #141414;
   border-radius: 10px;
 }
+
+.singleGenre {
+  margin-right: 10px;
+}
+.movieGenreBox {
+  display: flex;
+  justify-content: center;
+
+}

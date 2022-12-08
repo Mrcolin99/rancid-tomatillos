@@ -16,4 +16,13 @@ describe('home page', () => {
     cy.get(':nth-child(1) > a > .moviePoster').click()
     cy.get('.homeLink').click()
   })
+
+
+  it('should throw 500 error', () => {
+    cy.intercept(
+      'GET',
+      "https://rancid-tomatillos.herokuapp.com/api/v2/movies",
+      {statusCode: 500}
+    )
+  })
 })
