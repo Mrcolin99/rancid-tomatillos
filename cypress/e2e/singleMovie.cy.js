@@ -10,7 +10,7 @@ describe('single movie page', () => {
       cy.get(':nth-child(1) > a > .moviePoster').click()
       cy.intercept({
         method: 'GET',
-        url: 'https://rancid-tomatillos.herokuapp.com/api/v2/694919'
+        url: 'https://rancid-tomatillos.herokuapp.com/api/v2/movies/694919'
       }, { fixture: 'singleMovie' })
       cy.get('.movieDetails')
       cy.get('.detailsContainer')
