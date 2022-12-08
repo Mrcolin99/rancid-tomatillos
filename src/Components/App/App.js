@@ -2,6 +2,7 @@ import { Component } from 'react'
 import './App.css';
 import MovieContainer from '../MovieContainer/MovieContainer.js'
 import MovieDetails from '../MovieDetails/MovieDetails.js'
+import ErrorPage from '../ErrorPage/ErrorPage.js'
 import { fetchData, fetchSingleData } from '../../apiCalls.js'
 import { Route, Link, Switch } from 'react-router-dom';
 
@@ -38,22 +39,28 @@ class App extends Component {
           <Route
             exact path="/"
             render={() => (
+
               <div className="movieContainer">
+              {!this.state.errorMessage ?
                 <MovieContainer
                 handleClick={this.fetchSingleMovie}
                 movies={this.state.movies}/>
-              </div> )}
+                : <ErrorPage />}
+              </div>
+              )}
           />
           <Route
             path="/:id"
             render={({ match }) => (
-            <div className="movieDetailsContainer">
-             <MovieDetails
+            <div className="detailsContainer">
+            {!this.state.errorMessage ?
+            <MovieDetails
               singleMovie={this.state.singleMovie}
               fetchSingleMovie={this.fetchSingleMovie}
-              id={match.params.id}
-              />
-            </div>)}
+              id={match.params.id}/>
+              : <ErrorPage />}
+            </div>
+            )}
           />
         </Switch>
       </main>
