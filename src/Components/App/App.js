@@ -12,7 +12,7 @@ class App extends Component {
     super()
     this.state = {
       movies: [],
-      singleMovie: {},
+      singleMovie: null,
       errorMessage: ''
       }
   }
@@ -20,13 +20,13 @@ class App extends Component {
   componentDidMount = () => {
     fetchData()
     .then(data => this.setState({movies: data.movies}))
-    .catch(err => this.setState({errorMessage: "ERROR, Please try again."}))
+    .catch(err => this.setState({errorMessage: err.message}))
     }
 
   fetchSingleMovie = (id) => {
     fetchSingleData(id)
     .then(data => this.setState({singleMovie: data.movie}))
-    .catch(err => this.setState({errorMessage: "ERROR, Please try again."}))
+    .catch(err => this.setState({errorMessage: err.message}))
     }
 
   render() {
