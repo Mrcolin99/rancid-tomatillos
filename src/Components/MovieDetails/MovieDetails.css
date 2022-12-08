@@ -13,14 +13,18 @@ h2 {
     font-size: 1vw;
     height: auto;
     width: 30vw;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    flex-direction: column;
     padding: 7px;
     border-radius: 5px;
 }
 
 .detailsSection {
   margin: auto;
+  margin-top: 20px;
+  color: white;
+  display: flex;
+  justify-content: space-around;
 }
 
 .singleMoviePoster {
