@@ -1,19 +1,24 @@
+
 html {
-  background-color: #666666;
-  height: 100%;
+  background-color: black;
+  height: auto;
 }
 
 .errorMessage {
   color: white;
 }
-.title {
+
+
+.homeLink {
+  text-decoration: none;
+  font-size: 2vw;
   color: white;
   display: flex;
-  margin-left: 5vw;
-  width: 15vw;
+  margin-left: 1vw;
+  width: 10vw;
 }
 .App {
-  height: 100vw;
+  height: auto;
   display: flex;
   background-color: black;
   flex-direction: column;
@@ -24,4 +29,9 @@ html {
   display: flex;
   justify-content: center;
   margin: 10px;
+  height: 30vw;
+}
+
+.navBar {
+  margin-top: 10px;
 }
