@@ -10,7 +10,7 @@ h2 {
 
 .movieDetails {
     background-color: rgba(0,0,0, 0.75);
-    font-size: 1vw;
+    font-size: .75vw;
     height: auto;
     width: 30vw;
     display: flex;
@@ -31,8 +31,8 @@ h2 {
 }
 
 .singleMoviePoster {
-  height: 25vw;
-  width: 17vw;
+  height: 35vw;
+  width: 22vw;
   padding:.5vw;
   margin:.5vw;
   opacity: 0.9;
