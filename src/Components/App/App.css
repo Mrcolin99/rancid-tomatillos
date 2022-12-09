@@ -8,6 +8,13 @@ html {
   color: white;
 }
 
+.potatoImg {
+  transform: scaleX(-1);
+  margin-top: 15px;
+  margin-left: 10px;
+  height: 8vh;
+  width: 6vw
+}
 
 .homeLink {
   text-decoration: none;
@@ -15,7 +22,9 @@ html {
   font-weight: bolder;
   color: white;
   display: flex;
-  margin-left: 1vw;
+  align-items: center;
+  justify-content:  center;
+  margin-left: .5vw;
   width: 10vw;
 }
 .App {
@@ -34,5 +43,6 @@ html {
 }
 
 .navBar {
-  margin-top: 10px;
+  display: flex;
+  margin-top: 12px;
 }

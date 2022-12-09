@@ -24,9 +24,8 @@ const MovieDetails = ({singleMovie, fetchSingleMovie, fetchSingleMovieTrailer, m
     padding: "20px",
     objectFit: "contain",
   }
-  const movieGenres = singleMovie.genres.map(genre => <h4 className='singleGenre' key={ Date.now + genre}>{ genre }</h4>)
+  const movieGenres = singleMovie.genres.map(genre => <h3 className='singleGenre' key={ Date.now + genre}>{ genre }</h3>)
   const formatRevenue = Intl.NumberFormat('en-US').format(singleMovie.revenue)
-  // const trailer = movieTrailer.videos.map(video => <YouTube videoId={video.key}/>)
   const opts = {
       height: '250vh',
       width: '400vw',
@@ -35,26 +34,27 @@ const MovieDetails = ({singleMovie, fetchSingleMovie, fetchSingleMovieTrailer, m
         autoplay: 0,
       },
     };
+
   return (
       <section className="detailsSection" style={backdropImage}>
         <div>
           <img className="singleMoviePoster" src={singleMovie.poster_path} alt={singleMovie.title} />
         </div>
         <div className="detailTrailerSection">
-          {movieTrailer.videos.length > 0 &&
+          {movieTrailer.videos.length > 0 ?
           <div className="trailerSection">
             <YouTube className="trailers" opts={opts} videoId={movieTrailer.videos[0].key} />
-          </div>}
+          </div> : <h1>Loading...</h1>}
           <div className="movieDetails">
             <h1>{singleMovie.title}</h1>
+            <div className="movieGenreBox">
+              { movieGenres }
+            </div>
             <h4>{singleMovie.overview}</h4>
             <p>Average Rating: {Math.round(singleMovie.average_rating * 100) / 100}/10</p>
             <p>Release Date: {singleMovie.release_date}</p>
             {singleMovie.revenue > 0 && <p>Revenue: ${  formatRevenue }</p>}
             <p>Runtime: { singleMovie.runtime } min.</p>
-            <div className="movieGenreBox">
-              { movieGenres }
-            </div>
           </div>
         </div>
       </section>

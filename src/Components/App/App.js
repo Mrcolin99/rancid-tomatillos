@@ -5,6 +5,7 @@ import MovieDetails from '../MovieDetails/MovieDetails.js'
 import ErrorPage from '../ErrorPage/ErrorPage.js'
 import { fetchData, fetchSingleData, fetchSingleDataMovie } from '../../apiCalls.js'
 import { Route, Link, Switch } from 'react-router-dom';
+import potato from '../../Assets/potato7.png'
 
 
 class App extends Component {
@@ -42,6 +43,7 @@ class App extends Component {
       <main className="App">
         <nav className="navBar">
           <Link to="/" className="homeLink">Y U C K Y <br /> Y A M S</Link>
+          <img className="potatoImg" src={potato} alt="Potato Logo" />
         </nav>
         <Switch>
           <Route
