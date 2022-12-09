@@ -3,7 +3,7 @@ import './App.css';
 import MovieContainer from '../MovieContainer/MovieContainer.js'
 import MovieDetails from '../MovieDetails/MovieDetails.js'
 import ErrorPage from '../ErrorPage/ErrorPage.js'
-import { fetchData, fetchSingleData } from '../../apiCalls.js'
+import { fetchData, fetchSingleData, fetchSingleDataMovie } from '../../apiCalls.js'
 import { Route, Link, Switch } from 'react-router-dom';
 
 
@@ -13,7 +13,8 @@ class App extends Component {
     this.state = {
       movies: [],
       singleMovie: null,
-      errorMessage: ''
+      errorMessage: '',
+      movieTrailer: null
       }
   }
 
@@ -21,13 +22,20 @@ class App extends Component {
     fetchData()
     .then(data => this.setState({movies: data.movies}))
     .catch(err => this.setState({errorMessage: err.message}))
-    }
+  }
 
   fetchSingleMovie = (id) => {
     fetchSingleData(id)
     .then(data => this.setState({singleMovie: data.movie}))
     .catch(err => this.setState({errorMessage: err.message}))
+  }
+
+  fetchSingleMovieTrailer = (id) => {
+    fetchSingleDataMovie(id)
+    .then(data => this.setState({movieTrailer: data}))
+    .catch(err => this.setState({errorMessage: err.message}))
     }
+
 
   render() {
     return(
@@ -39,7 +47,6 @@ class App extends Component {
           <Route
             exact path="/"
             render={() => (
-
               <div className="movieContainer">
               {!this.state.errorMessage ?
                 <MovieContainer
@@ -57,6 +64,8 @@ class App extends Component {
             <MovieDetails
               singleMovie={this.state.singleMovie}
               fetchSingleMovie={this.fetchSingleMovie}
+              fetchSingleMovieTrailer={this.fetchSingleMovieTrailer}
+              movieTrailer={this.state.movieTrailer}
               id={match.params.id}/>
               : <ErrorPage />}
             </div>
