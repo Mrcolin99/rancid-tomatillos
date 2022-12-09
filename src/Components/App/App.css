@@ -12,6 +12,7 @@ html {
 .homeLink {
   text-decoration: none;
   font-size: 2vw;
+  font-weight: bolder;
   color: white;
   display: flex;
   margin-left: 1vw;

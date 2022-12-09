@@ -49,9 +49,7 @@ class App extends Component {
             render={() => (
               <div className="movieContainer">
               {!this.state.errorMessage ?
-                <MovieContainer
-                handleClick={this.fetchSingleMovie}
-                movies={this.state.movies}/>
+                <MovieContainer movies={this.state.movies}/>
                 : <ErrorPage />}
               </div>
               )}

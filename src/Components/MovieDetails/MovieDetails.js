@@ -16,13 +16,13 @@ const MovieDetails = ({singleMovie, fetchSingleMovie, fetchSingleMovieTrailer, m
 
   const backdropImage = {
     backgroundImage: `url(${singleMovie.backdrop_path})`,
-    height: "30vh auto",
+    height: "auto",
     width: "80vw",
     backgroundSize: "cover",
     borderRadius: '10px',
     backgroundRepeat: "no-repeat",
     padding: "20px",
-    objectFit: "contain"
+    objectFit: "contain",
   }
   const movieGenres = singleMovie.genres.map(genre => <h4 className='singleGenre' key={ Date.now + genre}>{ genre }</h4>)
   const formatRevenue = Intl.NumberFormat('en-US').format(singleMovie.revenue)
@@ -38,12 +38,13 @@ const MovieDetails = ({singleMovie, fetchSingleMovie, fetchSingleMovieTrailer, m
   return (
       <section className="detailsSection" style={backdropImage}>
         <div>
-        <img className="singleMoviePoster" src={singleMovie.poster_path} alt={singleMovie.title} />
+          <img className="singleMoviePoster" src={singleMovie.poster_path} alt={singleMovie.title} />
         </div>
         <div className="detailTrailerSection">
-        <div className="trailerSection">
-          <YouTube className="trailers" opts={opts} videoId={movieTrailer.videos[1].key} />
-        </div>
+          {movieTrailer.videos.length > 0 &&
+          <div className="trailerSection">
+            <YouTube className="trailers" opts={opts} videoId={movieTrailer.videos[0].key} />
+          </div>}
           <div className="movieDetails">
             <h1>{singleMovie.title}</h1>
             <h4>{singleMovie.overview}</h4>
