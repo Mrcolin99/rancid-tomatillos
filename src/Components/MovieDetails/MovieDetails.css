@@ -15,8 +15,10 @@ h2 {
     width: 30vw;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 7px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .detailsSection {
@@ -25,16 +27,23 @@ h2 {
   color: white;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .singleMoviePoster {
   height: 25vw;
   width: 17vw;
-  padding:1vw;
-  margin:1vw;
+  padding:.5vw;
+  margin:.5vw;
   opacity: 0.9;
   background-color: #141414;
   border-radius: 10px;
+}
+
+.detailTrailerSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .singleGenre {
