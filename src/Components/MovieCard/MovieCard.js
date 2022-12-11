@@ -1,18 +1,25 @@
 import './MovieCard.css'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
-const MovieCard = ({movieInfo}) => {
+const MovieCard = ({id, posterPath, title}) => {
   const moviePoster = (
     <img className="moviePoster"
-    src={movieInfo.poster_path}
-    alt={movieInfo.title}
+    src={posterPath}
+    alt={title}
   />)
 
   return (
     <div className="movieCard">
-      <Link to={`/${movieInfo.id}`}> {moviePoster} </Link>
+      <Link to={`/${id}`}> {moviePoster} </Link>
     </div>
   )
 }
 
 export default MovieCard
+
+MovieCard.propTypes = {
+  id: PropTypes.number.isRequired,
+  posterPath: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired
+}
