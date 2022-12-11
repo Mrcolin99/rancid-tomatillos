@@ -5,7 +5,8 @@ import MovieDetails from '../MovieDetails/MovieDetails.js'
 import ErrorPage from '../ErrorPage/ErrorPage.js'
 import { fetchData, fetchSingleData, fetchSingleDataMovie } from '../../apiCalls.js'
 import { Route, Link, Switch } from 'react-router-dom';
-import potato from '../../Assets/potato7.png'
+import potato from '../../Assets/potato2.png'
+import PropTypes from 'prop-types'
 
 
 class App extends Component {
@@ -13,7 +14,7 @@ class App extends Component {
     super()
     this.state = {
       movies: [],
-      singleMovie: null,
+      singleMovie: {},
       errorMessage: '',
       movieTrailer: null
       }
@@ -60,9 +61,18 @@ class App extends Component {
             path="/:id"
             render={({ match }) => (
             <div className="detailsContainer">
-            {!this.state.errorMessage ?
+            {!this.state.errorMessage && this.state.singleMovie !== {} ?
             <MovieDetails
               singleMovie={this.state.singleMovie}
+              title={this.state.singleMovie.title}
+              backdropPath={this.state.singleMovie.backdrop_path}
+              posterPath={this.state.singleMovie.poster_path}
+              genres={this.state.singleMovie.genres}
+              overview={this.state.singleMovie.overview}
+              averageRating={this.state.singleMovie.averageRating}
+              releaseDate={this.state.singleMovie.release_date}
+              revenue={this.state.singleMovie.revenue}
+              runtime={this.state.singleMovie.runtime}
               fetchSingleMovie={this.fetchSingleMovie}
               fetchSingleMovieTrailer={this.fetchSingleMovieTrailer}
               movieTrailer={this.state.movieTrailer}

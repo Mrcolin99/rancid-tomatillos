@@ -8,7 +8,7 @@ h2 {
     font-family: sans-serif;
 }
 
-.movieDetails {
+.movieDetails, .noTrailer {
     background-color: rgba(0,0,0, 0.75);
     font-size: .75vw;
     height: auto;
@@ -49,8 +49,12 @@ h2 {
 .singleGenre {
   margin-right: 10px;
 }
+
 .movieGenreBox {
   display: flex;
   justify-content: center;
+}
 
+.noTrailer {
+  margin-bottom: 5vh;
 }
