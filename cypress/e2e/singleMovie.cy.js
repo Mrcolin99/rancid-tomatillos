@@ -22,4 +22,12 @@ describe('single movie page', () => {
     cy.get('.homeLink').click()
     cy.get(':nth-child(1) > a > .moviePoster')
   })
+  it('should be able to play a preview', () => {
+    cy.get(':nth-child(1) > a > .moviePoster').click()
+    cy.intercept({
+      method: 'GET',
+      url: 'https://rancid-tomatillos.herokuapp.com/api/v2/movies/694919'
+    }, { fixture: 'singleMovie' })
+    cy.get('#widget2').click()
+  })
 })
