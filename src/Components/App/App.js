@@ -22,20 +22,20 @@ class App extends Component {
     }
   }
 
-  componentDidMount = () => {
-    fetchData()
+  componentDidMount = async () => {
+    await fetchData()
       .then(data => this.setState({ allMovies: data.movies, movies: data.movies}))
       .catch(err => this.setState({ errorMessage: err.message }))
   }
 
-  fetchSingleMovie = (id) => {
-    fetchSingleData(id)
+  fetchSingleMovie = async (id) => {
+    await fetchSingleData(id)
       .then(data => this.setState({ singleMovie: data.movie }))
       .catch(err => this.setState({ errorMessage: err.message }))
   }
 
-  fetchSingleMovieTrailer = (id) => {
-    fetchSingleDataMovie(id)
+  fetchSingleMovieTrailer = async (id) => {
+    await fetchSingleDataMovie(id)
       .then(data => this.setState({ movieTrailer: data }))
       .catch(err => this.setState({ errorMessage: err.message }))
   }
@@ -68,7 +68,7 @@ class App extends Component {
             path="/:id"
             render={({ match }) => (
               <div className="detailsContainer">
-                {!this.state.errorMessage && this.state.singleMovie !== {} ?
+                {!this.state.errorMessage && !this.state.singleMovie !== {} ?
                   <MovieDetails
                     singleMovie={this.state.singleMovie}
                     title={this.state.singleMovie.title}
