@@ -16,7 +16,6 @@ html {
   width: 6vw
 }
 
-
 .homeLink {
   text-decoration: none;
   font-size: 2vw;
@@ -28,6 +27,7 @@ html {
   margin-left: .5vw;
   width: 10vw;
 }
+
 .App {
   height: auto;
   display: flex;

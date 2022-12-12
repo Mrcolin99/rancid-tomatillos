@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
-import YouTube from 'react-youtube'
 import './MovieDetails.css'
 import PropTypes from 'prop-types'
+import YoutubeEmbed from '../YoutubeEmbed/YoutubeEmbed.js'
 
 const MovieDetails = (
   {singleMovie, title, backdropPath, posterPath, genres, overview,
@@ -34,14 +34,6 @@ const MovieDetails = (
   }
   const movieGenres = genres.map(genre => <h3 className='singleGenre' key={ Date.now + genre}>{ genre }</h3>)
   const formatRevenue = Intl.NumberFormat('en-US').format(revenue)
-  const opts = {
-      height: '250vh',
-      width: '400vw',
-      playerVars: {
-        // https://developers.google.com/youtube/player_parameters
-        autoplay: 0,
-      },
-    };
 
   return (
     <section className="detailsSection" style={backdropImage}>
@@ -51,7 +43,7 @@ const MovieDetails = (
         <div className="detailTrailerSection">
           {movieTrailer.videos.length > 0 ?
           <div className="trailerSection">
-            <YouTube className="trailers" opts={opts} videoId={movieTrailer.videos[0].key} />
+            <YoutubeEmbed className="trailers" embedId={movieTrailer.videos[0].key} />
           </div> : <div className="noTrailer"><h1>No Trailer Available</h1></div>}
           <div className="movieDetails">
             <h1>{title}</h1>
@@ -66,11 +58,7 @@ const MovieDetails = (
           </div>
         </div>
     </section>
-
-
-
   )
-
 }
 
 export default MovieDetails

@@ -1,5 +1,5 @@
 <a name="readme-top"></a>
-<h1>YUCKY YAMS</h1>
+<h1>[YUCKY YAMS](https://yucky-yams-git-async-mrcolin99.vercel.app/)</h1>
 
 ## Table of Contents
 
@@ -110,5 +110,3 @@ This project provides the perfect amount of challenge. Colin and I started the f
 [mdn]: https://developer.mozilla.org/en-US/
 [contributors-shield]: https://img.shields.io/badge/Contributors-2-2ea44f?style=for-the-badge
 [contributors-url]: https://github.com/emilyjmiles/fitlit-group-project/graphs/contributors
-
-
