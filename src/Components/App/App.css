@@ -8,6 +8,10 @@ html {
   color: white;
 }
 
+.searchError {
+  color: white;
+}
+
 .potatoImg {
   transform: scaleX(-1);
   margin-top: 8px;

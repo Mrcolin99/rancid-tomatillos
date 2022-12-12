@@ -6,7 +6,10 @@ const SearchBar = ({ data, filterMovies }) => {
     const filterValue = (event) => {
         const searchWord = event.target.value
         const filteredList = data.filter(movie => movie.title.includes(searchWord))
-        return filterMovies(filteredList)
+        let error
+        {filteredList === [] ? error = true : error = false}
+        console.log(filteredList, error)
+        return filterMovies(filteredList, error)
     }
 
     return (

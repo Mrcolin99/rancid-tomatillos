@@ -14,11 +14,12 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
+      searchError: null,
       allMovies: [],
       movies: [],
       singleMovie: {},
       errorMessage: '',
-      movieTrailer: null
+      movieTrailer: null,
     }
   }
 
@@ -40,8 +41,8 @@ class App extends Component {
       .catch(err => this.setState({ errorMessage: err.message }))
   }
 
-  filterMovieResults = (data) => {
-    this.setState({movies: data})
+  filterMovieResults = (data, error) => {
+    this.setState({movies: data, searchError: error})
   }
 
 
@@ -58,6 +59,7 @@ class App extends Component {
             exact path="/"
             render={() => (
               <div className="movieContainer">
+                {!this.state.searchError ? <h2></h2> : <h2 className="searchError">No results...</h2>}
                 {!this.state.errorMessage ?
                   <MovieContainer movies={this.state.movies} />
                   : <ErrorPage />}
