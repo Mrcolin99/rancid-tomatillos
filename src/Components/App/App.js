@@ -51,7 +51,7 @@ class App extends Component {
         <nav className="navBar">
           <Link to="/" className="homeLink">Y U C K Y <br /> Y A M S</Link>
           <img className="potatoImg" src={potato} alt="Potato Logo" />
-          <SearchBar data={this.state.allMovies} filterMovies={this.filterMovieResults} />
+          <SearchBar className="searchBar" data={this.state.allMovies} filterMovies={this.filterMovieResults} />
         </nav>
         <Switch>
           <Route
