@@ -4,15 +4,19 @@ import './MovieDetails.css'
 import PropTypes from 'prop-types'
 
 const MovieDetails = (
-  {singleMovie, title, backdropPath, posterPath, genres, overview, averageRating, releaseDate, revenue, runtime,
+  {singleMovie, title, backdropPath, posterPath, genres, overview,
+    averageRating, releaseDate, revenue, runtime,
     fetchSingleMovie, fetchSingleMovieTrailer,
     movieTrailer, id}) => {
+
   useEffect(() => {
-    fetchSingleMovie(id)
-    fetchSingleMovieTrailer(id)
+      (async() => {
+      await fetchSingleMovie(id)
+      await fetchSingleMovieTrailer(id)
+    })()
   }, [])
 
-  if(!movieTrailer) {
+  if(singleMovie === {} || !movieTrailer) {
     return (
       <p>Loading...</p>
     )
@@ -40,7 +44,7 @@ const MovieDetails = (
     };
 
   return (
-      <section className="detailsSection" style={backdropImage}>
+    <section className="detailsSection" style={backdropImage}>
         <div>
           <img className="singleMoviePoster" src={posterPath} alt={title} />
         </div>
@@ -61,7 +65,10 @@ const MovieDetails = (
             <p>Runtime: { runtime } min.</p>
           </div>
         </div>
-      </section>
+    </section>
+
+
+
   )
 
 }
