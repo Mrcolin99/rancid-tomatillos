@@ -9,7 +9,6 @@ import potato from '../../Assets/potato2.png'
 import PropTypes from 'prop-types'
 import SearchBar from '../Search/Search';
 
-
 class App extends Component {
   constructor() {
     super()
@@ -43,7 +42,6 @@ class App extends Component {
   filterMovieResults = (data) => {
     this.setState({movies: data})
   }
-
 
   render() {
     return (
