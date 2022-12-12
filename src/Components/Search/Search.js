@@ -8,6 +8,7 @@ const SearchBar = ({ data, filterMovies }) => {
         const filteredList = data.filter(movie => movie.title.includes(searchWord))
         let error
         {filteredList === [] ? error = true : error = false}
+        console.log(error)
         return filterMovies(filteredList, error)
     }
     return (
