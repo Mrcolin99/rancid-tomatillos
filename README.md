@@ -1,3 +1,6 @@
+<a name="readme-top"></a>
+<h1>YUCKY YAMS</h1>
+
 ## Table of Contents
 
 - [About The Project](#about-the-project)
@@ -108,5 +111,4 @@ This project provides the perfect amount of challenge. Colin and I started the f
 [contributors-shield]: https://img.shields.io/badge/Contributors-2-2ea44f?style=for-the-badge
 [contributors-url]: https://github.com/emilyjmiles/fitlit-group-project/graphs/contributors
 
-<a name="readme-top"></a>
-<h1>YUCKY YAMS</h1>
+
