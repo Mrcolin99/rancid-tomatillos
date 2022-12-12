@@ -108,27 +108,5 @@ This project provides the perfect amount of challenge. Colin and I started the f
 [contributors-shield]: https://img.shields.io/badge/Contributors-2-2ea44f?style=for-the-badge
 [contributors-url]: https://github.com/emilyjmiles/fitlit-group-project/graphs/contributors
 
-
-
-# Yucky Yams
-
-Yucky Yams is an app that provides details about movies!
-
-## Description
-
-Yucky Yams utilizes an external API via Heroku to display a list of movies. The user can interact with these movies to discover more details, such as overview, revenue, runtime, and even a trailer! This project was done by 2 students at [Turing School of Software & Design](turing.edu) [Connor Corcoran](github.com/connorcorc) & [Colin Ciervo](github.com/mrcolin99) in week 14.
-
-## Getting Started
-To get started, clone the repository to your local machine.
-
-
-
-## Authors
-
-Contributors names and contact info
-
-[Connor Corcoran](github.com/connorcorc)
-[Colin Ciervo](github.com/mrcolin99)
-
 <a name="readme-top"></a>
 <h1>YUCKY YAMS</h1>
