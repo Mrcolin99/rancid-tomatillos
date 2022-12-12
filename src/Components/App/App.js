@@ -14,6 +14,7 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
+      searchError: false,
       allMovies: [],
       movies: [],
       singleMovie: {},
@@ -40,8 +41,8 @@ class App extends Component {
       .catch(err => this.setState({ errorMessage: err.message }))
   }
 
-  filterMovieResults = (data) => {
-    this.setState({movies: data})
+  filterMovieResults = (data, error) => {
+    this.setState({movies: data, searchError: error})
   }
 
 
@@ -68,6 +69,7 @@ class App extends Component {
             path="/:id"
             render={({ match }) => (
               <div className="detailsContainer">
+                {!this.state.searchError ? <h2></h2> : <h2 className="searchError">No results...</h2>}
                 {!this.state.errorMessage && !this.state.singleMovie !== {} ?
                   <MovieDetails
                     singleMovie={this.state.singleMovie}
