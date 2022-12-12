@@ -1,4 +1,5 @@
 import './Search.css'
+import PropTypes from 'prop-types'
 
 
 const SearchBar = ({ data, filterMovies }) => {
@@ -15,5 +16,10 @@ const SearchBar = ({ data, filterMovies }) => {
     )
 }
 
+
+SearchBar.propTypes = {
+    data: PropTypes.array.isRequired,
+    filterMovies: PropTypes.func.isRequired
+}
 
 export default SearchBar
