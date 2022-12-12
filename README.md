@@ -1,5 +1,5 @@
-<a name="readme-top"></a>
-<h1>[YUCKY YAMS](https://yucky-yams-git-async-mrcolin99.vercel.app/)</h1>
+
+[YUCKY YAMS](https://yucky-yams-git-async-mrcolin99.vercel.app/)
 
 ## Table of Contents
 
