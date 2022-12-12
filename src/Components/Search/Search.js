@@ -16,10 +16,9 @@ const SearchBar = ({ data, filterMovies }) => {
     )
 }
 
+export default SearchBar
 
 SearchBar.propTypes = {
     data: PropTypes.array.isRequired,
     filterMovies: PropTypes.func.isRequired
 }
-
-export default SearchBar
