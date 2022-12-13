@@ -79,8 +79,6 @@ We utilized cypress in this project to automate our testing [Cypress](https://ww
 
 ## Contact
 
-[![Contributors][contributors-shield]][contributors-url]
-
 [Connor Corcoran](github.com/connorcorc)
 [Colin Ciervo](github.com/mrcolin99)
 
