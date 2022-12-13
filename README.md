@@ -60,7 +60,7 @@ You can find the project [here](https://github.com/mrcolin99/rancid-tomatillos) 
 
 <img width="1403" alt="Screen Shot 2022-12-12 at 6 19 28 AM" src="https://user-images.githubusercontent.com/50641779/207097911-6978d4ef-2772-413e-8fe2-a6e0cb02953b.png">
 
-<img width="1410" alt="Screen Shot 2022-12-12 at 6 19 36 AM" src="https://user-images.githubusercontent.com/50641779/207097913-ed0a4fb1-de97-4449-ad49-1fba479c6c23.png">
+<img width="1372" alt="Screen Shot 2022-12-13 at 6 22 37 AM" src="https://user-images.githubusercontent.com/50641779/207388798-1d8e9e7f-5acd-42b5-bfd3-0b26d8483424.png">
 
 New feature ideas:
 
