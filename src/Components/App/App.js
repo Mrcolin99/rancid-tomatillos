@@ -76,7 +76,7 @@ class App extends Component {
                     posterPath={this.state.singleMovie.poster_path}
                     genres={this.state.singleMovie.genres}
                     overview={this.state.singleMovie.overview}
-                    averageRating={this.state.singleMovie.averageRating}
+                    averageRating={this.state.singleMovie.average_rating}
                     releaseDate={this.state.singleMovie.release_date}
                     revenue={this.state.singleMovie.revenue}
                     runtime={this.state.singleMovie.runtime}
